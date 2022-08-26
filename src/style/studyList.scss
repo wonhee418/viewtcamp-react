@@ -1,0 +1,324 @@
+$mainColor: #6b63f6;
+
+.studyListPage {
+  .contentWrap {
+    display: flex;
+    justify-content: flex-start;
+
+    .serchBox {
+      width: 541rem;
+      box-shadow: 0px 6px 23px rgba(102, 96, 173, 0.14);
+      border-radius: 30px;
+      background-color: #fff;
+      padding: 40px;
+      margin-right: 60px;
+
+      .serchScroll {
+        height: calc(100vh - 40px - 49px - 81px - 140px);
+        overflow-y: overlay;
+        padding-right: 14px;
+      }
+
+      .serchScroll::-webkit-scrollbar {
+        width: 8px;
+      }
+      .serchScroll::-webkit-scrollbar-thumb {
+        background-color: $mainColor;
+        border-radius: 10px;
+        background-clip: padding-box;
+        border: 2px solid transparent;
+      }
+      .serchScroll::-webkit-scrollbar-track {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: inset 0px 0px 5px white;
+      }
+
+      .serchBar {
+        input[type="text"] {
+          width: 100%;
+          background: #f5f5fb;
+          background-image: url(./../assets/serchIcon.svg);
+          background-size: 24rem;
+          background-repeat: no-repeat;
+          background-position: right;
+          background-position-x: calc(100% - 18px);
+          border-radius: 10px;
+          padding: 19rem;
+          font-size: 18rem;
+          transition: all 0.3s;
+        }
+
+        input[type="text"]:focus {
+          background-image: url(./../assets/serchFocus.svg);
+          background-repeat: no-repeat;
+          caret-color: $mainColor;
+        }
+      }
+
+      .typeBox {
+        max-height: 556px;
+
+        .tag {
+          padding-top: 40px;
+          margin-top: 40px;
+          padding-bottom: 17px;
+          font-size: 20px;
+          font-weight: bold;
+          border-top: 1px solid #e9ecef;
+        }
+
+        .tag:first-of-type {
+          margin-top: 0px;
+          border-top: 0;
+        }
+
+        input[type="radio"] {
+          display: none;
+        }
+        input[type="radio"] + label {
+          display: inline-block;
+          cursor: pointer;
+          background-color: #fff;
+          border: 1px solid #ccd1d7;
+          border-radius: 10px;
+          text-align: center;
+          font-size: 14rem;
+          color: #666c78;
+          padding: 10rem 24rem;
+          margin-right: 8px;
+          margin-bottom: 10px;
+          transition: all 0.1s;
+          cursor: pointer;
+        }
+
+        input[type="radio"] + label:hover {
+          border: 1px solid $mainColor;
+          color: $mainColor;
+        }
+
+        input[type="radio"] + label:last-child {
+          margin-right: 0;
+        }
+        input[type="radio"].active + label {
+          background-color: $mainColor;
+          color: #fff;
+        }
+      }
+
+      .btnWrap {
+        margin-top: 50rem;
+        display: flex;
+        justify-content: space-between;
+
+        .resetBtn {
+          width: 124rem;
+          display: inline-block;
+          background: #eeeeee;
+          border-radius: 10px;
+          color: #898989;
+          font-size: 16rem;
+          text-align: center;
+          padding: 20rem 0;
+          cursor: pointer;
+          margin-right: 12px;
+          transition: all 0.2s;
+          img {
+            width: 16rem;
+            margin-right: 8rem;
+          }
+        }
+
+        .resetBtn:hover {
+          background: #dbdbdb;
+        }
+
+        .confirmBtn {
+          display: inline-block;
+          width: 325rem;
+          background: $mainColor;
+          border-radius: 10px;
+          color: #fff;
+          font-weight: bold;
+          font-size: 16rem;
+          text-align: center;
+          padding: 20rem 0;
+          cursor: pointer;
+          transition: all 0.2s;
+        }
+
+        .confirmBtn:hover {
+          background: #8983ff;
+        }
+      }
+    }
+
+    .studyListBox {
+      width: 927rem;
+      padding: 40px 60px;
+      background: #fff;
+      box-shadow: 0px 6px 23px rgba(102, 96, 173, 0.14);
+      border-radius: 30px;
+      cursor: default;
+    }
+
+    .flexBox {
+      display: flex;
+      justify-content: space-between;
+
+      .btnWrap {
+        > span {
+          display: inline-block;
+        }
+      }
+
+      span {
+        display: inline-block;
+      }
+
+      input[type="checkbox"] {
+        display: none;
+      }
+      input[type="checkbox"] + label {
+        display: inline-block;
+        position: relative;
+        background: url(./../assets/checkOut.svg);
+        background-repeat: no-repeat;
+        background-size: 24rem;
+        background-position-y: 50%;
+        font-weight: 500;
+        font-size: 18rem;
+        line-height: 54rem;
+        left: 0px;
+        padding-left: 34rem;
+        cursor: pointer;
+      }
+      input[id="recruit"]:checked + label::after {
+        content: "";
+        font-size: 25rem;
+        width: 24rem;
+        height: 24rem;
+        background: url(./../assets/checkIn.svg);
+        background-repeat: no-repeat;
+        background-size: 24rem;
+        text-align: center;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      input[id="recruit"]:checked + label {
+        color: $mainColor;
+      }
+
+      #recruit {
+        width: 24px;
+        height: 24px;
+        border: 2px solid #dfdfdf;
+        border-radius: 5px;
+      }
+
+      .refreshBtn {
+        color: #898989;
+        font-size: 16rem;
+        padding: 17rem;
+        border: 1px solid #c6c6c6;
+        border-radius: 10px;
+        margin-right: 24rem;
+        background: #fff;
+        transition: all 0.2s;
+        cursor: pointer;
+        transition: all 0.2s;
+        img {
+          width: 16rem;
+          max-width: 17px;
+          vertical-align: bottom;
+        }
+      }
+
+      .refreshBtn:hover {
+        background: #fbfbfb;
+      }
+      .createRoomBtn {
+        background: $mainColor;
+        border-radius: 10px;
+        color: #fff;
+        font-size: 18rem;
+        font-weight: bold;
+        padding: 18rem 32rem;
+        line-height: 1;
+        cursor: pointer;
+        transition: all 0.2s;
+
+        img {
+          width: 26rem;
+          object-fit: cover;
+          vertical-align: top;
+          margin-right: 6.5px;
+        }
+      }
+
+      .createRoomBtn:hover {
+        background: #8983ff;
+      }
+    }
+
+    .list {
+      margin-top: 20px;
+      padding-right: 20px;
+      height: calc(100vh - 40px - 49px - 81px - 40px - 160px);
+      overflow-y: overlay;
+    }
+
+    .list::-webkit-scrollbar {
+      width: 8px;
+    }
+    .list::-webkit-scrollbar-thumb {
+      background-color: $mainColor;
+      border-radius: 10px;
+      background-clip: padding-box;
+      border: 2px solid transparent;
+    }
+    .list::-webkit-scrollbar-track {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: inset 0px 0px 5px white;
+    }
+
+    .empty {
+      position: relative;
+      height: calc(100% - 100rem);
+      .box {
+        width: 100%;
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        img {
+          margin-bottom: 30rem;
+        }
+
+        p {
+          text-align: center;
+          font-size: 26rem;
+          font-weight: bold;
+          color: rgb(122, 122, 122);
+          word-break: keep-all;
+          line-height: 1.3;
+          &.txt {
+            line-height: 1;
+            padding-bottom: 30rem;
+            color: #232323;
+            font-size: 32rem;
+          }
+          span {
+            color: $mainColor;
+          }
+        }
+      }
+    }
+  }
+}

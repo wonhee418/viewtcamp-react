@@ -1,0 +1,56 @@
+$mainColor : #6B63F6;
+$pointColor: #f5f5fb;
+
+.header{
+  position: fixed;
+  left: 0px;
+  width: 272rem;
+  max-width: 272rem;
+  height: 100vh;
+  padding-top: 70rem;
+  background:#fff;
+
+  .logo {
+    max-width: 144px;
+    width: 144rem;
+    margin: 0 auto;
+    padding-bottom: 90rem;
+  }
+
+  .menu{
+    padding: 0 18rem;
+
+    ul{
+      li{
+        padding-left: 22px;
+        font-size: 16rem;
+        font-weight: 600;
+        line-height: 1;
+        border-radius: 10px;
+        margin-bottom: 18rem;
+        cursor: pointer;
+        svg{
+          width: 24rem;
+          vertical-align: middle;
+          margin-right: 23px;
+        }
+        span{
+          line-height: 1;
+          padding: 18rem 0;
+          display: inline-block;
+          color: #C7CADD;
+          vertical-align: middle;
+        }
+      }
+      li.active{
+        background: $pointColor;
+        span{
+          color: $mainColor;
+        }
+        svg path{
+          fill: $mainColor;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,97 @@
+.item {
+  background: #fbfbfb;
+  border: 1px solid #dee3e8;
+  border-radius: 17px;
+  padding: 24rem;
+  cursor: pointer;
+  margin-bottom: 18px;
+
+  .profileImg {
+    display: inline-block;
+    margin-right: 12px;
+    img {
+      width: 58rem;
+      height: 58rem;
+      max-width: 58px;
+      max-height: 58px;
+      border-radius: 50px;
+      object-fit: cover;
+    }
+  }
+
+  .studyInfo {
+    display: inline-block;
+    width: calc(100% - 70px);
+    vertical-align: top;
+    padding-top: 6px;
+
+    .studyTit {
+      font-size: 16rem;
+      padding-bottom: 12px;
+
+      .state {
+        float: right;
+        font-weight: 400;
+        font-size: 16rem;
+
+        span {
+          display: inline-block;
+        }
+
+        .full {
+          width: 10px;
+          height: 10px;
+          border-radius: 50px;
+          background: rgb(240, 116, 116);
+          margin-right: 6px;
+        }
+        .waiting {
+          width: 10px;
+          height: 10px;
+          border-radius: 50px;
+          background: rgb(116, 190, 114);
+          margin-right: 6px;
+        }
+      }
+    }
+    .studyTag {
+      > span {
+        padding: 4px 8px;
+        color: #6b63f6;
+        font-size: 12rem;
+        line-height: 14rem;
+        background: #efeffb;
+        border-radius: 25px;
+        margin-right: 8px;
+        display: inline-block;
+      }
+      span:last-child {
+        margin-right: 0;
+      }
+      .user {
+        background: none;
+        float: right;
+        padding-left: 0;
+        padding-right: 0;
+        span {
+          color: #6b63f6;
+          display: inline-block;
+        }
+        img {
+          margin-right: 7px;
+          width: 12px;
+          height: 13px;
+          vertical-align: text-bottom;
+        }
+      }
+    }
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.studyList:last-child {
+  margin-bottom: 0;
+}

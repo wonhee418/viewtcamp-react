@@ -1,23 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Header from "./components/Header.js";
+import { GlobalStyle } from "./style/GlobalStyle.js";
+import { Routes, Route } from "react-router-dom";
+import Home from "./pages/Home.js";
+import StudyList from "./pages/StudyList.js";
+import CreateRoom from "./pages/CreateRoom.js";
+import Mypage from "./pages/Mypage";
+import Login from "./pages/Login.js";
+import KakaoAuthHandle from "./pages/KaKaoAuthHandle";
+import VideoCheck from "./pages/VideoCheck";
+import StudyRoom from "./pages/StudyRoom";
+import Review from "./pages/Review";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <GlobalStyle />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/oauth/kakao/callback" element={<KakaoAuthHandle />} />
+        <Route path="/studyList" element={<StudyList />} />
+        <Route path="/createroom" element={<CreateRoom />} />
+        <Route path="/mypage" element={<Mypage />} />
+        <Route path="/videoCheck/*" element={<VideoCheck />} />
+        <Route path="/studyroom/*" element={<StudyRoom />} />
+        <Route path="/review" element={<Review />} />
+      </Routes>
     </div>
   );
 }

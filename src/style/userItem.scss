@@ -1,0 +1,73 @@
+.userItem {
+  padding: 26rem 20rem 20rem 20rem;
+  width: calc((100% - 40rem) / 5);
+  background: #ffffff;
+  box-shadow: 0px 6px 23px rgba(102, 96, 173, 0.14);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 23rem;
+
+  .profileBox {
+    position: relative;
+    img {
+      width: 74rem;
+      height: 74rem;
+      object-fit: cover;
+      margin-bottom: 12rem;
+      border-radius: 50px;
+    }
+    .host {
+      position: absolute;
+      right: calc(50% - 37rem);
+      bottom: 0;
+      width: 20rem;
+      height: 20rem;
+    }
+  }
+  > div {
+    width: 100%;
+    text-align: center;
+  }
+  .username {
+    font-size: 16rem;
+    font-weight: 500;
+    padding-bottom: 30rem;
+  }
+
+  .followBtn {
+    text-align: center;
+    font-size: 16rem;
+    font-weight: 600;
+    color: #fff;
+    background: #6b63f6;
+    border:1px solid #6b63f6;
+    border-radius: 10px;
+    margin-bottom: 8rem;
+    text-align: center;
+    padding: 8rem 0;
+    cursor: pointer;
+  }
+
+  .banBtn {
+    background: #ffffff;
+    border: 1px solid #848484;
+    
+    border-radius: 10px;
+    font-size: 16rem;
+    font-weight: 500;
+    text-align: center;
+    padding: 8rem 0;
+    cursor: pointer;
+    color: #848484;
+  }
+
+  .unfollowBtn {
+    @extend .followBtn;
+    border:1px solid #6b63f6;
+    background: #fff;
+    margin-bottom: 8rem;
+    color: #6b63f6;
+  }
+}

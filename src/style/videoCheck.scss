@@ -1,0 +1,15 @@
+.videoCheckPage{
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+
+  .video{
+    margin-right: 50px;
+    .mycam{
+      width: 200px;
+      height: 200px;
+      background: skyblue;
+    }
+  }
+}

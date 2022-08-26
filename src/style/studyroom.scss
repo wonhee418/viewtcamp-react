@@ -1,0 +1,239 @@
+$mainColor: #6b63f6;
+
+.studyroom {
+  background: url(./../assets/studyroomBg.jpg);
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 50rem;
+
+  .leftBox {
+    width: calc(100% - 500rem);
+    box-shadow: 0px 6px 23px rgba(102, 96, 173, 0.14);
+    border-radius: 30px;
+    background: #fff;
+    padding: 32rem;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 60rem;
+
+    .topBox {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 32rem;
+
+      .exitBtn {
+        background: #7b7b7b;
+        backdrop-filter: blur(8px);
+        border-radius: 15px;
+        padding: 17rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        img {
+          width: 20rem;
+          height: 23rem;
+        }
+        span {
+          color: #fff;
+          font-size: 16rem;
+          font-weight: bold;
+          padding-left: 14rem;
+          line-height: 1;
+        }
+      }
+      .title {
+        font-weight: 600;
+        font-size: 24rem;
+      }
+
+      .studyState {
+        width: 140rem;
+        background: #3bca8e;
+        border-radius: 15px;
+        padding: 17rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+
+        &.end {
+          background: #7b7b7b;
+        }
+        img {
+          width: 20rem;
+          height: 23rem;
+        }
+        span {
+          color: #fff;
+          font-size: 16rem;
+          font-weight: bold;
+          padding-left: 14rem;
+          line-height: 1;
+        }
+      }
+    }
+
+    .chatWrap {
+      width: 100%;
+      height: 400rem;
+      margin: 0 auto;
+      padding: 20rem;
+      border-radius: 20px;
+      background: #fff;
+      box-shadow: 0px 6px 23px rgba(102, 96, 173, 0.14);
+      border: 2px solid #f5f5f5;
+      margin-bottom: 30rem;
+      position: relative;
+
+      .chatArea{
+        height: 270rem;
+        overflow: overlay;
+        padding-right: 30rem;
+
+
+        &::-webkit-scrollbar {
+          width: 8px;
+        }
+        &::-webkit-scrollbar-thumb {
+          background-color: $mainColor;
+          border-radius: 10px;
+          background-clip: padding-box;
+          border: 2px solid transparent;
+        }
+        &::-webkit-scrollbar-track {
+          background-color: #fff;
+          border-radius: 10px;
+          box-shadow: inset 0px 0px 5px white;
+        }
+
+      }
+
+      .send {
+        position: absolute;
+        bottom: 20rem;
+        width: calc(100% - 40rem);
+        border: 2px solid #f5f5f5;
+        border-radius: 10px;
+        padding: 14rem;
+        display: flex;
+
+        input {
+          width: calc(100% - 56rem);
+          font-size: 16rem;
+          background: transparent;
+        }
+        .sending {
+          cursor: pointer;
+
+          img{
+            width: 33rem;
+          }
+        }
+      }
+
+      .mychat {
+        display: flex;
+        justify-content: flex-end;
+        padding-bottom: 10rem;
+
+        .profile {
+          padding-left: 14rem;
+          img {
+            width: 50rem;
+            height: 50rem;
+            border-radius: 50px;
+            object-fit: cover;
+          }
+        }
+        .flexBox {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          background: #fff;
+          border-top-left-radius: 50px;
+          border-bottom-left-radius: 50px;
+          border-bottom-right-radius: 50px;
+          padding: 20rem;
+          border: 1px solid #f5f5f5;
+
+          .sender {
+            padding-bottom: 6rem;
+          }
+        }
+      }
+
+      .otherchat {
+        display: flex;
+        justify-content: flex-start;
+        padding-bottom: 10rem;
+        .profile {
+          padding-right: 14rem;
+          img {
+            width: 50rem;
+            height: 50rem;
+            border-radius: 50px;
+            object-fit: cover;
+          }
+        }
+        .flexBox {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          background: #fff;
+          padding: 20rem;
+          border-top-right-radius: 50px;
+          border-bottom-left-radius: 50px;
+          border-bottom-right-radius: 50px;
+          border: 1px solid #f5f5f5;
+
+          .sender {
+            padding-bottom: 6rem;
+          }
+        }
+      }
+    }
+
+    .userList {
+      display: flex;
+    }
+  }
+
+  .rightBox {
+    width: 440rem;
+    display: inline-block;
+
+    .stopwatch {
+      background: #ffce51;
+      box-shadow: 0px 6px 23px rgba(102, 96, 173, 0.14);
+      border-radius: 30px;
+      padding: 40rem 0;
+      margin-bottom: 40rem;
+
+      .time {
+        padding-bottom: 40rem;
+        text-align: center;
+        span {
+          font-size: 64rem;
+          font-weight: 600;
+        }
+      }
+      .contBox {
+        text-align: center;
+
+        span {
+          font-size: 30rem;
+          margin-right: 30rem;
+          cursor: pointer;
+
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+}

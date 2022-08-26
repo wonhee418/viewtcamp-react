@@ -1,0 +1,13 @@
+.footer{
+  width: calc(100% - 272rem);
+  position:fixed;
+  left:272rem;
+  bottom: 0;
+  background: #3C4145;
+  color: #fff;
+  padding: 72rem 212rem;
+}
+
+.footer *{
+  color: inherit;
+}

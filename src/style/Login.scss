@@ -1,0 +1,50 @@
+.loginWrap{
+    width: 640rem;
+    position: fixed;
+    left: calc(50% + 272rem);
+    top: 50%;
+    transform: translate(calc(-50% - (272rem / 2)), -50%);
+    background: #fff;
+    padding: 100rem 62rem;
+    border-radius: 50px;
+    box-shadow: 0px 6px 23px rgba(102, 96, 173, 0.14);
+
+
+    .logo{
+      img{
+        width: 260rem;
+      }
+      margin-bottom: 62rem;
+    }
+
+    .text{
+      font-size: 32rem;
+      font-weight: bold;
+      margin-bottom: 66rem;
+    }
+    button{
+      display: block;
+      cursor: pointer;
+    }
+    .kakaoLoginBtn{
+      background: #FEE638;
+      margin-bottom: 26px;
+      padding: 22rem;
+      font-size: 26rem;
+      font-weight: bold;
+      text-align: center;
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .returnBtn{
+      font-size: 20rem;
+      font-weight: 500;
+      width: 100%;
+      text-align: center;
+      color: #c4c4c4;
+      background: none;
+    }
+
+
+}

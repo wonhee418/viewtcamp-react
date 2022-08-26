@@ -1,6 +1,38 @@
+
+@font-face {
+  font-family: "PretendardBold";
+  src: url("./assets/fonts/Pretendard-Bold.woff") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "PretendardSemiBold";
+  src: url("./assets/fonts/Pretendard-SemiBold.woff") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "PretendardMedium";
+  src: url("./assets/fonts/Pretendard-Medium.woff") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "PretendardRegular";
+  src: url("./assets/fonts/Pretendard-Regular.woff") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "PretendardLight";
+  src: url("./assets/fonts/Pretendard-Light.woff") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: PretendardBold, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
