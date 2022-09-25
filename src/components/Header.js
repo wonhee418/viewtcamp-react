@@ -1,9 +1,6 @@
 import "./../style/header.scss"
 import logoImg from "./../assets/logo.png"
 import { useNavigate } from "react-router-dom";
-import { useState } from 'react';
-
-
 
 function Header() {
   const navigate = useNavigate();

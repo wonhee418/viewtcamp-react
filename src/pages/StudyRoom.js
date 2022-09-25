@@ -4,7 +4,7 @@ import SockJS from "sockjs-client";
 import Stomp from "stompjs";
 import { useEffect, useRef, useState } from "react";
 import ChatiingBox from "./../components/ChatiingBox";
-import { useFetch, useUserDataFetch } from "../hooks/useFetch";
+import { useUserDataFetch } from "../hooks/useFetch";
 import exitIcon from "./../assets/exitIcon.svg";
 import lockOpenIcon from "./../assets/lockopen2.svg";
 import lockIcon from "./../assets/lock.svg";
@@ -37,7 +37,6 @@ function StudyRoom() {
   const ROOM_TITLE = location.state.title;
   const HOST = location.state.host;
 
-  // "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJFWFBJUkVEX0RBVEUiOjE2NjEyNzE3ODAsIlBST0ZJTEVfSU1HIjoiaHR0cDovL2sua2FrYW9jZG4ubmV0L2RuL2N5WkphMC9idHJDSUh3aXRKby9qUkhXOFRzY0tMdlRrYmJoazltMjhrL2ltZ182NDB4NjQwLmpwZyIsImlzcyI6InNwYXJ0YSIsIlVTRVJfTkFNRSI6IuydtOyngO2YnCJ9.pLFZnqjHyThp6XLBGv1pw8fk_TU5fWQnC8EqzYOHQCY"
   const [sendMessage, setSendMessage] = useState({
     type: "TALK",
     roomId: ROOM_ID,
@@ -71,7 +70,7 @@ function StudyRoom() {
               if (res.type === "TALK") {
                 setChatList([res]);
                 setTimeout(() => {
-                  chatRef.current?.scrollIntoView({behavior: "smooth"})                  
+                  chatRef.current?.scrollIntoView({ behavior: "smooth" })
                 }, 10);
               } else if (res.type === "ENTER") {
                 setChatList([res]);
@@ -85,24 +84,24 @@ function StudyRoom() {
                   .then(data => {
                     setRoomData(data)
                   })
-              setTimeout(() => {
-                  chatRef.current?.scrollIntoView({behavior: "smooth"})                  
+                setTimeout(() => {
+                  chatRef.current?.scrollIntoView({ behavior: "smooth" })
                 }, 10);
 
               } else if (res.type === "CLOSE") {
                 //스터디시작
                 setChatList([res]);
                 setStudying(true);
-              setTimeout(() => {
-                  chatRef.current?.scrollIntoView({behavior: "smooth"})                  
+                setTimeout(() => {
+                  chatRef.current?.scrollIntoView({ behavior: "smooth" })
                 }, 10);
 
               } else if (res.type === "OPEN") {
                 //스터디종료
                 setChatList([res]);
                 setStudying(false);
-              setTimeout(() => {
-                  chatRef.current?.scrollIntoView({behavior: "smooth"})                  
+                setTimeout(() => {
+                  chatRef.current?.scrollIntoView({ behavior: "smooth" })
                 }, 10);
 
               } else if (res.type === "BAN") {
@@ -119,8 +118,8 @@ function StudyRoom() {
                   .then(data => {
                     setRoomData(data)
                   })
-              setTimeout(() => {
-                  chatRef.current?.scrollIntoView({behavior: "smooth"})                  
+                setTimeout(() => {
+                  chatRef.current?.scrollIntoView({ behavior: "smooth" })
                 }, 10);
 
               }

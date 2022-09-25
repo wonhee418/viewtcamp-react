@@ -1,5 +1,4 @@
 import "./App.css";
-import Header from "./components/Header.js";
 import { GlobalStyle } from "./style/GlobalStyle.js";
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home.js";
@@ -8,7 +7,6 @@ import CreateRoom from "./pages/CreateRoom.js";
 import Mypage from "./pages/Mypage";
 import Login from "./pages/Login.js";
 import KakaoAuthHandle from "./pages/KaKaoAuthHandle";
-import VideoCheck from "./pages/VideoCheck";
 import StudyRoom from "./pages/StudyRoom";
 import Review from "./pages/Review";
 
@@ -23,7 +21,6 @@ function App() {
         <Route path="/studyList" element={<StudyList />} />
         <Route path="/createroom" element={<CreateRoom />} />
         <Route path="/mypage" element={<Mypage />} />
-        <Route path="/videoCheck/*" element={<VideoCheck />} />
         <Route path="/studyroom/*" element={<StudyRoom />} />
         <Route path="/review" element={<Review />} />
       </Routes>
